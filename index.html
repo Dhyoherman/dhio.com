@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio M. Dhio Hermansyah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="style.css"> 
+    
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+    <nav class="bg-white border-b-2 border-blue-500 shadow-md header-font sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-6 py-3">
+                <a id="link-home" href="#" onclick="showSection('home', this)" class="nav-link text-blue-600 hover:text-blue-800 active-link font-bold">Home</a>
+                <a id="link-about" href="#" onclick="showSection('about', this)" class="nav-link text-gray-600 hover:text-blue-600">About</a>
+                <a id="link-socmed" href="#" onclick="showSection('socmed', this)" class="nav-link text-gray-600 hover:text-blue-600">Socmed</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="section-content min-h-[calc(100vh-60px)] bg-gradient-darkgray flex flex-col justify-center items-center text-center p-8 transition-opacity duration-500 ease-in-out" style="opacity: 1;">
+        <div class="container mx-auto">
+            <h1 class="text-7xl md:text-8xl font-portfolio text-white mb-4">My</h1>
+            <h1 class="text-7xl md:text-9xl font-portfolio text-white mb-12 font-extrabold tracking-wider">Portofolio</h1>
+            
+            <p class="text-xl text-white font-portfolio max-w-3xl mx-auto">
+                Welcome to My Portofolio 👋<br>
+                I'm M. Dhio Hermansyah, an Information Systems student focused on technology development, digital business, and self-development. Outside of academia, I'm also active as a freelancer in the IT field and a bodybuilder who embraces discipline and consistency as a core value.
+                Through this portfolio, I want to demonstrate how technology, hard work, and discipline can create maximum performance.
+            </p>
+        </div>
+    </section>
+
+    <section id="about" class="section-content hidden min-h-[calc(100vh-60px)] bg-gradient-pinkish justify-center items-start p-16 transition-opacity duration-500 ease-in-out" style="opacity: 0;">
+        <div class="container mx-auto max-w-5xl">
+            <div class="flex flex-col md:flex-row items-start md:space-x-12 text-gray-800">
+                <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                    <img src="path/to/your/photo.jpg" alt="Dhio Hermansyah" class="w-full max-w-xs md:max-w-none border-2 border-white shadow-lg">
+                </div>
+                <div class="w-full md:w-2/3 font-portfolio">
+                    <h2 class="text-2xl font-bold mb-4">Dhio Hermansyah in Here.</h2>
+                    <p class="mb-8 text-lg">
+                        I am an Information Systems student actively developing myself in the fields of technology, digital business, and personal development. In addition to focusing on academics and freelancing for a company, I also have a strong passion for fitness and bodybuilding, which has fostered discipline, perseverance, and a competitive spirit within me.
+                        I believe that balancing a sharp mind and a strong physique is the key to achieving maximum performance in every aspect of life — both professionally and personally.
+                    </p>
+                    <h3 class="text-xl font-semibold mb-3">🛠️ Skills and Competencies</h3>
+                    <ul class="list-none space-y-1 ml-0 text-lg">
+                        <li>Information systems analysis and design</li>
+                        <li>Database management & basic web development</li>
+                        <li>Technology project management and digital marketing</li>
+                        <li>Professional communication & teamwork</li>
+                        <li>Personal discipline & goal setting (through bodybuilding experience)</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold mt-6 mb-3">🚀 Personal Vision & Values</h3>
+                    <p class="text-lg">
+                        To be a highly competitive, professional, and inspiring individual — combining technology, business, and a healthy lifestyle as a foundation for creating a positive impact on oneself and those around me.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="socmed" class="section-content hidden min-h-[calc(100vh-60px)] bg-gradient-gray flex flex-col justify-center items-center text-center p-8 transition-opacity duration-500 ease-in-out" style="opacity: 0;">
+        <div class="container mx-auto font-portfolio">
+            
+            <h2 class="text-4xl text-gray-800 mb-8 font-bold">
+                REACH OUT:
+            </h2>          
+            
+            <div class="flex space-x-8 justify-center mt-10">
+                
+                <a href="https://www.instagram.com/dhyoherman/" target="_blank" class="block transition duration-300 transform hover:scale-110">
+                    <img src="schreenshot instagram.png" alt="Logo Instagram" class="w-16 h-16 object-contain">
+                </a>
+                
+                <a href="https://www.linkedin.com/in/dhio-hermansyah-214354251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+                    <img src="schreenshot linkedin.png" alt="Logo LinkedIn" class="w-16 h-16 object-contain">
+                </a>
+                
+                <a href="https://github.com/Dhyoherman" target="_blank" class="block transition duration-300 transform hover:scale-110">
+                    <img src="schreenshot github.png" alt="Logo GitHub" class="w-16 h-16 object-contain">
+                </a>
+                
+            </div>
+        </div>
+    </section>
+    
+    <footer class="text-center py-4 bg-gray-200 text-sm header-font">
+        &copy; 2025 M. Dhio Hermansyah Portofolio. Built with Tailwind CSS.
+    </footer>
+    
+    <script>
+        const TRANSITION_DURATION = 500; 
+
+        function showSection(sectionId, clickedLink) {
+            const sections = document.querySelectorAll('.section-content');
+            const targetSection = document.getElementById(sectionId);
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active-link', 'font-bold', 'text-blue-600');
+                link.classList.add('text-gray-600');
+            });
+            if (clickedLink) {
+                clickedLink.classList.add('active-link', 'font-bold', 'text-blue-600');
+                clickedLink.classList.remove('text-gray-600');
+            }
+
+            let visibleSection = null;
+            sections.forEach(section => {
+                if (!section.classList.contains('hidden')) {
+                    visibleSection = section;
+                    section.style.opacity = '0';
+                }
+            });
+            if (targetSection) {
+                setTimeout(() => {
+                    if (visibleSection) {
+                        visibleSection.classList.add('hidden');
+                        visibleSection.classList.remove('flex', 'flex-col', 'justify-center', 'items-center', 'items-start'); 
+                    }
+                    targetSection.classList.remove('hidden'); 
+                    
+                    if (sectionId === 'about') {
+                        targetSection.classList.add('flex', 'justify-center', 'items-start');
+                    } else if (sectionId === 'home' || sectionId === 'socmed') {
+                        targetSection.classList.add('flex', 'flex-col', 'justify-center', 'items-center');
+                    }
+                    setTimeout(() => {
+                        targetSection.style.opacity = '1';
+                    }, 50);
+                }, TRANSITION_DURATION); 
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.section-content.hidden').forEach(s => s.style.opacity = '0');
+            const homeSection = document.getElementById('home');
+            homeSection.classList.add('flex', 'flex-col', 'justify-center', 'items-center');
+            homeSection.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>

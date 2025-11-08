@@ -1,0 +1,14 @@
+.bg-gradient-darkgray {
+    background: linear-gradient(135deg, #616161 0%, #424242 100%);
+}
+
+.bg-gradient-pinkish {
+    background: linear-gradient(135deg, #c3b6b6 0%, #a09393 100%);
+}
+
+.bg-gradient-gray {
+    background: linear-gradient(135deg, #a8a8a8 0%, #909090 100%);
+}
+.section-content {
+    transition: opacity 0.5s ease-in-out; 
+}
